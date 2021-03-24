@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.SignUpFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/first_nameTF"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First Name "
+        app:boxCornerRadiusTopEnd="2dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:id="@+id/first_nameET"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/last_nameTF"
+        android:layout_margin="10dp"
+        android:layout_below="@id/first_nameTF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last Name "
+        app:boxCornerRadiusTopEnd="2dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:id="@+id/last_nameET"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_nameTF"
+        android:layout_margin="10dp"
+        android:layout_below="@id/last_nameTF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="UserName "
+        app:boxCornerRadiusTopEnd="2dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:id="@+id/user_nameET"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTF"
+        android:layout_margin="10dp"
+        android:layout_below="@id/user_nameTF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password "
+        app:boxCornerRadiusTopEnd="2dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:id="@+id/passwordET"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sign_upBTN"
+        android:layout_margin="10dp"
+        android:layout_below="@id/passwordTF"
+        android:textColor="@color/textColor"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"/>
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.LoginFragment">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usernameTF"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="UserName "
+        app:boxCornerRadiusTopEnd="2dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:id="@+id/usernameET"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTF"
+        android:layout_margin="10dp"
+        android:layout_below="@id/usernameTF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password "
+        app:boxCornerRadiusTopEnd="2dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:id="@+id/passwordET"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginBTN"
+        android:layout_margin="10dp"
+        android:layout_below="@id/passwordTF"
+        android:textColor="@color/textColor"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registerBTN"
+        android:layout_margin="10dp"
+        android:layout_below="@id/loginBTN"
+        android:textColor="@color/textColor"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create an Account"/>
+
+
+</RelativeLayout>

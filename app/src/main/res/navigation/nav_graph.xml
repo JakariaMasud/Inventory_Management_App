@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.programmingtestapplication.view.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addTransactionFragment"
+            app:destination="@id/addTransactionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_saleTransactionFragment"
+            app:destination="@id/saleTransactionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_locationTrackingFragment"
+            app:destination="@id/locationTrackingFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_allProductFragment"
+            app:destination="@id/allProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTransactionFragment"
+        android:name="com.example.programmingtestapplication.view.AddTransactionFragment"
+        android:label="Add To Inventory"
+        tools:layout="@layout/fragment_add_transaction" >
+        <action
+            android:id="@+id/action_addTransactionFragment_to_allProductFragment"
+            app:popUpTo="@+id/addTransactionFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/allProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/saleTransactionFragment"
+        android:name="com.example.programmingtestapplication.view.SaleTransactionFragment"
+        android:label="Sale From Inventory"
+        tools:layout="@layout/fragment_sale_transaction" >
+        <action
+            app:popUpTo="@+id/saleTransactionFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_saleTransactionFragment_to_allProductFragment"
+            app:destination="@id/allProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationTrackingFragment"
+        android:name="com.example.programmingtestapplication.view.LocationTrackingFragment"
+        android:label="Location Tracking"
+        tools:layout="@layout/fragment_location_tracking" />
+    <fragment
+        android:id="@+id/allProductFragment"
+        android:name="com.example.programmingtestapplication.view.AllProductFragment"
+        android:label="Inventory"
+        tools:layout="@layout/fragment_all_product" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.programmingtestapplication.view.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            app:popUpTo="@+id/loginFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.programmingtestapplication.view.SignUpFragment"
+        android:label="Create An Account"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            app:popUpTo="@+id/signUpFragment"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>

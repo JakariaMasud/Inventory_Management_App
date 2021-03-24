@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.AddTransactionFragment"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/add_product_nameTF"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product Name"
+                app:boxCornerRadiusTopEnd="2dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:id="@+id/add_product_nameET"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_below="@+id/add_product_nameTF"
+                android:id="@+id/add_product_unitTF"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product Unit In Milliliter"
+                app:boxCornerRadiusTopEnd="2dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:id="@+id/add_product_unitET"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/add_product_unitTF"
+        android:id="@+id/add_product_quantityTF"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product Quantity"
+        app:boxCornerRadiusTopEnd="2dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:id="@+id/add_product_quantityET"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/add_product_quantityTF"
+        android:id="@+id/add_product_rateTF"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product Rate In Taka"
+        app:boxCornerRadiusTopEnd="2dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:id="@+id/add_product_rateET"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_select_dateBTN"
+        android:layout_margin="10dp"
+        android:layout_below="@id/add_product_rateTF"
+        android:textColor="@color/textColor"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Date"/>
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_selected_dateTV"
+        android:text="No Date Selected"
+        android:textStyle="bold"
+        android:layout_below="@id/add_select_dateBTN"
+        android:textColor="#000"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addBTN"
+                android:layout_margin="10dp"
+                android:layout_below="@id/add_selected_dateTV"
+                android:textColor="@color/textColor"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="add"/>
+            <ProgressBar
+                android:visibility="gone"
+                android:id="@+id/add_progress"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></ProgressBar>
+
+        </RelativeLayout>
+
+
+
